@@ -3,31 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link for css -->
+    <link rel="stylesheet" href="/styles/styles.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Crimson+Pro:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>Generador de memes</title>
 </head>
 <body>
     <header>
-        <title>Generador de memes</title>
-        <button>
-            <i></i>
-            Imagen
-        </button>
-        <button>
-            <i>
-            </i>
-            Texto
-        </button>
-        <button>
-            <i></i>
-            Modo oscuro
-        </button>
+        <article>
+            <h1 class="main-title">Generador de memes</h1>
+        </article>
+        <article class="header-buttons-container">
+            <ul class="header-buttons-list">
+                <li>
+                    <button>
+                        <i></i>
+                        Imagen
+                    </button>
+                </li>
+                <li>      
+                    <button>
+                        <i>
+                        </i>
+                        Texto
+                    </button>
+                </li>
+                    <button>
+                        <i></i>
+                        Modo oscuro
+                    </button>
+                </li>
+            </ul>
+        </article>
     </header>
     <main>
-
+        <section>
+            <h2>TOP TEXT</h2>
+            <img src="" alt="">
+            <h2>BOTTOM TEXT</h2>
+        </section>
+        <section>
+            <button>
+                <i></i>
+                Descargar meme
+            </button>
+        </section>
     </main>
     <aside>
-
+        <h1>IMAGEN</h1>
+        <form>
+            <label for="url-field">URL</label>
+            <input id="url-field" type="url">
+        </form>
+        <form>
+            <label for="fondo">FONDO</label>
+            <input id="fondo" type="color">
+            <input id="fondo" type="s">
+        </form>
     </aside>
-
 </body>
 </html>

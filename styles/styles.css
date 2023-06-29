@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Crimson Pro', serif;
+}
+header{
+    background-color: #181e2a;
+    color: #fff;
+}
+.main-title{
+    font-family: 'Caprasimo', cursive;
+}
