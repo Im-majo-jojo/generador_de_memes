@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Crimson Pro', serif;
+    font-family: 'Tajawal', sans-serif;
 }
 header{
     background-color: #181e2a;
@@ -10,4 +10,31 @@ header{
 }
 .main-title{
     font-family: 'Caprasimo', cursive;
+    padding: 10px;
+    font-size: 35px;
+}
+.header-title-container{
+    display: flex;
+    justify-content: center;
+}
+.header-buttons-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.header-buttons-list{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: 20%;
+}
+.header-buttons-list li{
+    margin: 2% 5% 5%;
+    flex-direction: row;
+}
+.header-buttons-list button{
+    border: none;
+    background-color: #181e2a;
+    color: #fff;
 }
