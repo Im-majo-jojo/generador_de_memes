@@ -18,60 +18,67 @@
     <title>Generador de memes</title>
 </head>
 <body>
-    <header>
-        <article class="header-title-container">
-            <h1 class="main-title">Generador de memes</h1>
-        </article>
-        <article class="header-buttons-container">
-            <ul class="header-buttons-list">
-                <li>
-                    <button class="image-icon">
-                        Imagen
-                    </button>
-                </li>
-                <li>      
-                    <button class="text-icon">
-                        Texto
-                    </button>
-                </li>
-                <li>
-                    <button class="light-icon">
-                        Modo oscuro
-                    </button>
-                </li>
-            </ul>
-        </article>
-    </header>
-    <main>
-        <section class="main-container">
-            <article class="top-text frame">
-                <h2>TOP TEXT</h2>
+    <div class="segments">
+    <div class="first-segment">
+        <header>
+            <article class="header-title-container">
+                <h1 class="main-title">Generador de memes</h1>
             </article>
-            <article class="main-image">
-                <img src="" alt="">
+            <article class="header-buttons-container">
+                <ul class="header-buttons-list">
+                    <li>
+                        <button class="image-icon">
+                            Imagen
+                        </button>
+                    </li>
+                    <li>      
+                        <button class="text-icon">
+                            Texto
+                        </button>
+                    </li>
+                    <li>
+                        <button class="light-icon">
+                            Modo oscuro
+                        </button>
+                    </li>
+                </ul>
             </article>
-            <article class="bottom-text frame">
-                <h2>BOTTOM TEXT</h2>
-            </article>
-        </section>
-        <section>
-            <button>
-                <i></i>
-                Descargar meme
-            </button>
-        </section>
-    </main>
-    <aside>
-        <h1>IMAGEN</h1>
-        <form>
-            <label for="url-field">URL</label>
-            <input id="url-field" type="url">
-        </form>
-        <form>
-            <label for="fondo">FONDO</label>
-            <input id="fondo" type="color">
-            <input id="fondo" type="s">
-        </form>
-    </aside>
+        </header>
+    </div>
+    <div class="second-segment">
+        <main>
+            <div class="main-mayor-container">
+                <section class="main-container">
+                    <article class="top-text frame">
+                        <h2>TOP TEXT</h2>
+                    </article>
+                    <article class="main-image">
+                        <img src="" alt="">
+                    </article>
+                    <article class="bottom-text frame">
+                        <h2>BOTTOM TEXT</h2>
+                    </article>
+                </section>
+                <section class="download-button">
+                    <button class="download-icon">
+                        Descargar meme
+                    </button>
+                </section>
+            </div>
+        </main>
+        <aside>
+            <h1>IMAGEN</h1>
+            <form>
+                <label for="url-field">URL</label>
+                <input id="url-field" type="url">
+            </form>
+            <form>
+                <label for="fondo">FONDO</label>
+                <input id="fondo" type="color">
+                <input id="fondo" type="s">
+            </form>
+        </aside>
+    </div>
+</div>
 </body>
 </html>

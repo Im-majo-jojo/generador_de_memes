@@ -4,6 +4,37 @@
     box-sizing: border-box;
     font-family: 'Tajawal', sans-serif;
 }
+.segments{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+}
+.first-segment{
+    width:100%;
+    z-index: 1;
+}
+.second-segment{
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+}
+main{
+ width: 100%;
+ z-index: 3;
+ background-color: #30343f;
+}
+aside{
+    z-index: 5;
+    float: right;
+    width: 10%;
+    height: 100%;
+    background-color: #252935;
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
 header{
     background-color: #181e2a;
     color: #fff;
@@ -12,10 +43,12 @@ header{
     font-family: 'Caprasimo', cursive;
     padding: 10px;
     font-size: 35px;
+
 }
 .header-title-container{
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 .header-buttons-container{
     display: flex;
@@ -51,15 +84,19 @@ header{
     content: '\f0eb';
     font: var(--fa-font-solid);
 }
+.download-icon::before{
+    content: '\f019';
+    font: var(--fa-font-solid);
+}
 /*end icons*/
 /*main*/
-main{
-    background-color: #30343f;
+.main-mayor-container{
     color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 .main-container{
     display: flex;
@@ -82,4 +119,14 @@ main{
     background-color: #000;
     width: 100%;
     padding: 30% 0;
+}
+/*download button*/
+.download-button button{
+    background-color: #2f7d32;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
 }
