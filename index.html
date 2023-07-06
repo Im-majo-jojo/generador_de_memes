@@ -63,7 +63,112 @@
                 </button>
             </section>
         </main>
-        <aside>
+        <aside class="text-edition">
+            <section class="aside-items aside-items-text">
+                <h2 class="aside-title">TEXTO</h2>
+                <div class="control-panel top-text-field">
+                    <h3>SUPERIOR</h3>
+                    <form>
+                        <input id="text-field" type="text" aria-label="top-text-field" placeholder="TOP TEXT">
+                    </form>
+                </div>
+                <div class="text-check-box">
+                    <form>
+                        <input id="text-visibility" type="checkbox">
+                        <label for="text-visibility">Sin texto superior</label>
+                    </form>
+                </div>
+                <div class="control-panel bottom-text-field">
+                    <h3>INFERIOR</h3>
+                    <form>
+                        <input id="text-field" type="text" aria-label="bottom-text-field" placeholder="BOTTOM TEXT">
+                    </form>
+                </div>
+                <div class="text-check-box">
+                    <form>
+                        <input id="text-visibility" type="checkbox">
+                        <label for="text-visibility">Sin texto inferior</label>
+                    </form>
+                </div>
+                <div class="panel-select-font">
+                    <h3>FUENTE</h3>
+                    <select id="select-font-family" aria-label="seleccion de familia de fuente">
+                        <option value="Arial">Arial</option>
+                        <option value="Arial Black">Arial Black</option>
+                        <option value="American Typewriter">American Typewriter</option>
+                        <option value="Andale Mono">Andale Mono</option>
+                        <option value="Comic Sans MS">Comic Sans MS</option>
+                        <option value="Impact">Impact</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Timer New Roman">Timer New Roman</option>
+                    </select>
+                </div>
+                <div class="font-section">
+                    <input type="number" aria-label="Tamaño de fuente" id="text-size-input" min="12" value="40" class="text-size-input">
+                    <div class="button-text-alignment">
+                        <button id="left-align-text" class="button-alignment left-icon" aria-label="alinear texto a la izquierda">
+                            <i class="fa-solid fa-align-left"></i>
+                        </button>
+                        <button id="center-align-text" class="button-alignment center-icon" aria-label="alinear texto al centro">
+                            <i class="fa-solid fa-align-center"></i>
+                        </button>
+                        <button id="right-align-text" class="button-alignment right-icon" aria-label="alinear texto a la derecha">
+                            <i class="fa-solid fa-align-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="background-color-section">
+                    <div class="color-picker">
+                        <h3>COLOR</h3>
+                        <form>
+                            <input id="background-text-color" type="color" value="#000000" aria-label="color-de-fondo">
+                        </form>
+                    </div>
+                    <div class="background-color-picker">
+                        <h3>FONDO</h3>
+                        <form>
+                            <input id="color-text-color" type="color" value="#ffffff" aria-label="color-de-fondo">
+                        </form>
+                    </div>
+                </div> 
+                <div class="background-text-check-box">
+                    <form>
+                        <input id="background-visibility" type="checkbox">
+                        <label for="background-visibility">Fondo transparente</label>
+                    </form>
+                </div>
+                <div class="contour-text">
+                    <h3>CONTORNO</h3>
+                    <div class="button-text-contour">
+                        <button id="none-contour-text" class="button-none button-contour" aria-label="ningun contorno">
+                            Ninguno
+                        </button>
+                        <button id="ligth-contour-text" class="button-light button-contour" aria-label="contorno claro">
+                            Claro
+                        </button>
+                        <button id="dark-contour-text" class="button-dark button-contour" aria-label="contorno oscuro">
+                            Oscuro
+                        </button>
+                    </div>
+                </div>
+                <div class="padding-text">
+                    <h3>ESPACIADO</h3>
+                    <input type="number" aria-label="espaciado de texto" id="padding-text-value" min="10" max="50" value="35">
+                </div>
+                <div class="line-height">
+                    <h3>INTERLINEADO</h3>
+                    <select id="select-line-height" aria-label="seleccion de familia de fuente">
+                        <option value="0.8">0.8</option>
+                        <option value="1">1</option>
+                        <option value="1.2">1.2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="2">2</option>
+                        <option value="2.5">2.5</option>
+                    </select>
+                </div>
+            </section>
+        </aside>
+        <aside class="mode-edition">
             <section class="aside-items">
                 <h2 class="aside-title">IMAGEN</h2>
                 <div class="control-panel url-field-div">
