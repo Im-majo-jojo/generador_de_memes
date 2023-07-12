@@ -232,13 +232,7 @@ input[type="range"]{
         visibility: visible;
     }
     .download-button button{
-        background-color: #2f7d32;
         color: #fff;
-        border: none;
-        border-radius: 5px;
-        padding: 15px 20px;
-        display: flex;
-        flex-direction: row;
         margin: -30px 0 53px;
     }
 }
@@ -357,4 +351,84 @@ input[type="range"]{
         justify-content: center;
         padding-right: 8px;
     }
+}
+/*--------modo claro------------*/
+body{
+    background-color: #eeeeee;
+}
+.segments{
+    background-color: #ffffff;
+}
+.second-segment{
+    background-color: #ffffff;
+}
+header{
+    background-color: #e0e0e0;
+    color: #424242;
+}
+.header-buttons-list button{
+    background-color: #e0e0e0;
+    color: #424242;
+}
+.image-icon::before{
+    content: '\f1c5';
+    font: var(--fa-font-solid);
+    color: #424242;
+}
+.text-icon::before{
+    content: '\f031';
+    font: var(--fa-font-solid);
+    color: #424242;
+}
+.light-icon::before{
+    content: '\f0eb';
+    font: var(--fa-font-solid);
+    color: #424242;
+}
+.download-icon::before{
+    content: '\f019';
+    font: var(--fa-font-solid);
+}
+.main-image{
+    background-color: #000;
+}
+.frame{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+.mode-edition{
+    background-color: #fafafa;
+    color: #424242;
+}
+input,
+button,
+select{
+    color: #424242;
+}
+#url-field,
+#text-field{
+    background-color: #e0e0e0;
+}
+#select-mode,
+#select-font-family,
+#padding-text-value,
+#left-align-text,
+#center-align-text,
+#right-align-text,
+#text-size-input,
+#none-contour-text,
+#ligth-contour-text,
+#dark-contour-text,
+#select-line-height{
+    background-color: #e0e0e0;
+}
+input[type="range"]{
+    background-color: #5a5c68;
+}
+.button-reset{
+    background-color: #3a3e49;
+ }
+.text-edition{
+    background-color: #fafafa;
+    color: #3a3e49;
 }
