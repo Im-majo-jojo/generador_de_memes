@@ -6,13 +6,12 @@
 }
 body{
     background-color: #30343f;
-}
+} 
 .segments{
     width: 100%;
     display: flex;
     flex-direction: column;
     z-index: 0;
-    background-color: #30343f;
 }
 .first-segment{
     width:100%;
@@ -25,7 +24,7 @@ body{
     z-index: 2;
     background-color: #30343f;
 }
-header{
+.header{
     background-color: #181e2a;
     color: #fff;
 }
@@ -124,6 +123,7 @@ main{
     margin: 10px 0 80px;
 }
 /*-----------------------------*/
+/*aside imagen*/
 .mode-edition{
     z-index: 10;
     float: right;
@@ -131,13 +131,16 @@ main{
     height: 100%;
     background-color: #252935;
     color: #fff;
-    display: flex;
+    display: none;
     visibility: hidden;
     position: fixed;
     right: 0;
     top: 0;
     padding: 15px;
     font-size: 10px;
+}
+.display-visibility{
+    display: flex;
 }
 .aside-items{
     display: flex;
@@ -228,9 +231,9 @@ input[type="range"]{
 }
 /*----------------------------*/
 @media (min-width: 1200px) {
-    .mode-edition{
+     .mode-edition{
         visibility: visible;
-    }
+    }  
     .download-button button{
         color: #fff;
         margin: -30px 0 53px;
@@ -250,14 +253,16 @@ input[type="range"]{
     }
 }
 /*-----------------*/
+/*aside text*/
 .text-edition{
-    z-index: 15;
+    z-index: 11;
     float: right;
     width: 100%;
     height: 100%;
     background-color: #252935;
     color: #fff;
-    display: flex;
+    display: none;
+    visibility: hidden;
     justify-content: center;
     position: fixed;
     right: 0;
@@ -329,8 +334,9 @@ input[type="range"]{
 }
 @media (min-width: 700px) {
     .text-edition{
-        z-index: 8;
+        z-index: 15;
         width: 220px;
+        visibility: hidden;
     }
     .text-edition h3{
         padding: 10% 0 5%;
@@ -353,82 +359,76 @@ input[type="range"]{
     }
 }
 /*--------modo claro------------*/
-body{
-    background-color: #eeeeee;
-}
-.segments{
+.second-segment-light{
     background-color: #ffffff;
 }
-.second-segment{
-    background-color: #ffffff;
-}
-header{
+.header-light{
     background-color: #e0e0e0;
     color: #424242;
 }
-.header-buttons-list button{
+.header-buttons-list-light button{
     background-color: #e0e0e0;
     color: #424242;
 }
-.image-icon::before{
+.image-icon-light::before{
     content: '\f1c5';
     font: var(--fa-font-solid);
     color: #424242;
 }
-.text-icon::before{
+.text-icon-light::before{
     content: '\f031';
     font: var(--fa-font-solid);
     color: #424242;
 }
-.light-icon::before{
+.light-icon-light::before{
     content: '\f0eb';
     font: var(--fa-font-solid);
     color: #424242;
 }
-.download-icon::before{
+.download-icon-light::before{
     content: '\f019';
     font: var(--fa-font-solid);
 }
-.main-image{
+.main-image-light{
     background-color: #000;
 }
-.frame{
+.frame-light{
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
 }
-.mode-edition{
+.mode-edition-light{
     background-color: #fafafa;
     color: #424242;
 }
-input,
+/* input,
 button,
 select{
     color: #424242;
-}
-#url-field,
-#text-field{
+} */
+#url-field-light,
+#text-field-light{
     background-color: #e0e0e0;
 }
-#select-mode,
-#select-font-family,
-#padding-text-value,
-#left-align-text,
-#center-align-text,
-#right-align-text,
-#text-size-input,
-#none-contour-text,
-#ligth-contour-text,
-#dark-contour-text,
-#select-line-height{
+#select-mode-light,
+#select-font-family-light,
+#padding-text-value-light,
+#left-align-text-light,
+#center-align-text-light,
+#right-align-text-light,
+#text-size-input-light,
+#none-contour-text-light,
+#ligth-contour-text-light,
+#dark-contour-text-light,
+#select-line-height-light{
     background-color: #e0e0e0;
 }
 input[type="range"]{
     background-color: #5a5c68;
 }
-.button-reset{
+.button-reset-light{
     background-color: #3a3e49;
  }
-.text-edition{
+.text-edition-light{
     background-color: #fafafa;
     color: #3a3e49;
 }
