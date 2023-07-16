@@ -90,16 +90,17 @@ main{
 .main-container{
     display: flex;
     width: 100%;
+    justify-content: center;
     max-width: 260px;
     max-height: 260px;
-    flex-grow: 1;
-    flex-direction: column;
 }
 .main-image{
     display: flex;
     background-size: cover;
     background-color: #000;
     flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .frame{
     color: rgb(0, 0, 0);
@@ -139,7 +140,7 @@ main{
     padding: 15px;
     font-size: 10px;
 }
-.display-visibility{
+.display-visibility-image{
     display: flex;
 }
 .aside-items{
@@ -231,8 +232,13 @@ input[type="range"]{
 }
 /*----------------------------*/
 @media (min-width: 1200px) {
-     .mode-edition{
+    .main-container{
+        max-width: 610px;
+        max-height: 610px;
+    }
+    .mode-edition{
         visibility: visible;
+        display: flex;
     }  
     .download-button button{
         color: #fff;
@@ -262,13 +268,16 @@ input[type="range"]{
     background-color: #252935;
     color: #fff;
     display: none;
-    visibility: hidden;
+    visibility: visible;
     justify-content: center;
     position: fixed;
     right: 0;
     top: 0;
     padding: 15px;
     font-size: 10px;
+}
+.display-visibility-text{
+    display: flex;
 }
 .aside-items-text{
     width: 100%;
@@ -336,7 +345,7 @@ input[type="range"]{
     .text-edition{
         z-index: 15;
         width: 220px;
-        visibility: hidden;
+        visibility: visible;
     }
     .text-edition h3{
         padding: 10% 0 5%;
@@ -406,7 +415,7 @@ select{
     color: #424242;
 } */
 #url-field-light,
-#text-field-light{
+#text-field-light{  
     background-color: #e0e0e0;
 }
 #select-mode-light,
