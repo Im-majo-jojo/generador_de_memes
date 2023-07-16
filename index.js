@@ -24,38 +24,40 @@ const imageMenuButton= document.querySelector(".mode-edition")
 
 
 
-imageMenu.addEventListener("click", ()=>{
+// imageMenu.addEventListener("click", ()=>{
     
-    if (imageMenuButton.style.visibility === "hidden") {
-        imageMenuButton.style.visibility = "visible";
-    }else {
-        console.log(imageMenu);
-        }
-        
-})
-textMenu.addEventListener("click", ()=>{
-    const textMenuButton= document.querySelector(".text-edition").classList.toggle("display-visibility")
-    console.log(textMenuButton)
-})
-
-
-// function changeMenuImage() {
-//     if (imageMenu.style.visibility === "hidden") {
-//         imageMenu.style.visibility = "visible";
+//     if (imageMenuButton.style.visibility === "hidden") {
+//         imageMenuButton.style.visibility = "visible";
 //     }else {
 //         console.log(imageMenu);
-//     }
-//   }
-// function changeMenuText() {
-//     if (textMenu.style.visibility === "hidden") {
-//         textMenu.style.visibility = "visible";
-//     } else {
-//         textMenu.style.visibility = "hidden";
+//         }
         
-//         console.log(textMenu);
-//     }
+// })
+// textMenu.addEventListener("click", ()=>{
+//     const textMenuButton= document.querySelector(".text-edition").classList.toggle("display-visibility")
+//     console.log(textMenuButton)
+// })
+
+
+function changeMenuImage() {
+    if (imageMenu.style.display === "none") {
+        imageMenu.style.display = "flex";
+    }else {
+        imageMenu.style.display = "none"
+
+        console.log(imageMenu);
+    }
+  }
+function changeMenuText() {
+    if (textMenu.style.display === "none") {
+        textMenu.style.display = "flex";
+    } else {
+        textMenu.style.display = "none";
+        
+        console.log(textMenu);
+    }
     
-// }
+}
 
 
 //----------------------------
