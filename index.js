@@ -30,10 +30,34 @@ const colorMode = document.querySelector(".light-icon")
 
 colorMode.addEventListener("click", () => {
     const segmentColor = document.querySelector(".second-segment").classList.toggle("second-segment-light")
-    const headerColor = document.querySelector(".header").classList.toggle("header-light")
+    const headerColor = document.querySelector(".header").classList.toggle("background-light")
     const headerIconsColor = document.querySelector(".header-buttons-list").classList.toggle("header-buttons-list-light")
-  //  const IconsColorlight = document.querySelector(".image-icon-light").classList.toggle(".image-icon-light")
+    const bodyColor = document.querySelector(".body").classList.toggle("body-light")
+    const asideTextColor = document.querySelector(".text-edition").classList.toggle("aside-light")
+    const asideImageColor = document.querySelector(".mode-edition").classList.toggle("aside-light")
+
+
+    const inputColorLight = document.getElementById("url-field").classList.toggle("background-light")
+    const inputTopTextLight = document.querySelector(".text-field-top").classList.toggle("background-light")
+    const inputBottomTextLight = document.querySelector(".text-field-bottom").classList.toggle("background-light")
+
+
+
+    
+
+    
 })
+//#select-mode,
+// #select-font-family,
+// #padding-text-value,
+// #left-align-text,
+// #center-align-text,
+// #right-align-text,
+// #text-size-input,
+// #none-contour-text,
+// #ligth-contour-text,
+// #dark-contour-text,
+// #select-line-height
 //image menu:
 //url image
 const inputUrlMode = document.querySelector("#url-field")

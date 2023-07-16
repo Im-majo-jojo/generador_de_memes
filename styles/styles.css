@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-body{
+.body{
     background-color: #30343f;
 } 
 .segments{
@@ -163,8 +163,8 @@ select{
     color: #fff;
     outline: 0;
 }
-#url-field,
-#text-field{
+.url-field,
+.text-field{
     padding: 7px 17px;
     margin-bottom: 10px;
     background-color: #3a3e49;
@@ -193,9 +193,9 @@ select{
 .panel-select{
     width: calc(50% - 5px);
 }
-#select-mode,
-#select-font-family,
-#padding-text-value,
+.select-mode,
+.select-font-family,
+.padding-text-value,
 #left-align-text,
 #center-align-text,
 #right-align-text,
@@ -368,10 +368,11 @@ input[type="range"]{
     }
 }
 /*--------modo claro------------*/
-.second-segment-light{
-    background-color: #ffffff;
-}
-.header-light{
+.second-segment-light,
+.body-light{
+    background-color: #eeeeee;
+} 
+.background-light{
     background-color: #e0e0e0;
     color: #424242;
 }
@@ -379,48 +380,19 @@ input[type="range"]{
     background-color: #e0e0e0;
     color: #424242;
 }
-.image-icon-light::before{
-    content: '\f1c5';
-    font: var(--fa-font-solid);
-    color: #424242;
-}
-.text-icon-light::before{
-    content: '\f031';
-    font: var(--fa-font-solid);
-    color: #424242;
-}
-.light-icon-light::before{
-    content: '\f0eb';
-    font: var(--fa-font-solid);
-    color: #424242;
-}
-.download-icon-light::before{
-    content: '\f019';
-    font: var(--fa-font-solid);
-}
-.main-image-light{
-    background-color: #000;
-}
-.frame-light{
-    color: rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
-}
-.mode-edition-light{
+.aside-light{
     background-color: #fafafa;
     color: #424242;
 }
-/* input,
-button,
-select{
-    color: #424242;
-} */
 #url-field-light,
-#text-field-light{  
+#text-field-light,
+.fields-color{  
     background-color: #e0e0e0;
 }
-#select-mode-light,
-#select-font-family-light,
-#padding-text-value-light,
+
+.select-mode-light,
+.select-font-family-light,
+.padding-text-value-light,
 #left-align-text-light,
 #center-align-text-light,
 #right-align-text-light,
@@ -430,10 +402,19 @@ select{
 #dark-contour-text-light,
 #select-line-height-light{
     background-color: #e0e0e0;
+    color: #424242;
+}/*
+input,
+button,
+select{
+    border: 0;
+    background-color: transparent;
+    color: #fff;
+    outline: 0;
 }
 input[type="range"]{
     background-color: #5a5c68;
-}
+}*/
 .button-reset-light{
     background-color: #3a3e49;
  }

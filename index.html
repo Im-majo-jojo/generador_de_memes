@@ -17,7 +17,7 @@
     <!-- title -->
     <title>Generador de memes</title>
 </head>
-<body>
+<body class="body">
     <div class="segments">
     <div class="first-segment">
         <header class="header">
@@ -69,7 +69,7 @@
                 <div class="control-panel top-text-field">
                     <h3>SUPERIOR</h3>
                     <form>
-                        <input id="text-field" type="text" aria-label="top-text-field" placeholder="TOP TEXT">
+                        <input id="top-text-field" class="text-field text-field-top" type="text" aria-label="top-text-field" placeholder="TOP TEXT">
                     </form>
                 </div>
                 <div class="text-check-box">
@@ -81,7 +81,7 @@
                 <div class="control-panel bottom-text-field">
                     <h3>INFERIOR</h3>
                     <form>
-                        <input id="text-field" type="text" aria-label="bottom-text-field" placeholder="BOTTOM TEXT">
+                        <input id="bottom-text-field" class="text-field text-field-bottom" type="text" aria-label="bottom-text-field" placeholder="BOTTOM TEXT">
                     </form>
                 </div>
                 <div class="text-check-box">
@@ -92,7 +92,7 @@
                 </div>
                 <div class="panel-select-font">
                     <h3>FUENTE</h3>
-                    <select id="select-font-family" aria-label="seleccion de familia de fuente">
+                    <select id="select-font-family" class="select-font-family"aria-label="seleccion de familia de fuente">
                         <option value="Arial">Arial</option>
                         <option value="Arial Black">Arial Black</option>
                         <option value="American Typewriter">American Typewriter</option>
@@ -153,7 +153,7 @@
                 </div>
                 <div class="padding-text">
                     <h3>ESPACIADO</h3>
-                    <input type="number" aria-label="espaciado de texto" id="padding-text-value" min="10" max="50" value="35">
+                    <input type="number" aria-label="espaciado de texto" id="padding-text-value" class="padding-text-value" min="10" max="50" value="35">
                 </div>
                 <div class="line-height">
                     <h3>INTERLINEADO</h3>
@@ -174,7 +174,7 @@
                 <div class="control-panel url-field-div">
                     <h3>URL</h3>
                     <form>
-                        <input id="url-field" type="url" aria-label="url field">
+                        <input id="url-field" class="url-field" type="url" aria-label="url field">
                     </form>
                 </div>
                 <div class="control-panel columns-color-select">
@@ -186,7 +186,7 @@
                             </form>
                         </div>
                         <div class="panel-select">
-                            <select name="select-mode" id="select-mode" aria-label="modo-de-mezcla">
+                            <select class="select-mode" id="select-mode" aria-label="modo-de-mezcla">
                                 <option value="unset">Ninguno</option>
                                 <option value="lighten">Aclarar</option>
                                 <option value="darken">Oscurecer</option>
