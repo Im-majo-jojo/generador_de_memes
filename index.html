@@ -48,14 +48,13 @@
     <div class="second-segment">
         <main>
             <div class="main-container" style="height: 500px;">
-                <div class="main-image">
-                    <p class="top-text frame">
+                    <p id="top-frame-changes" class="top-text frame">
                         TOP TEXT
                     </p>
-                    <p class="bottom-text frame">
+                    <div class="main-image"></div>
+                    <p id="bottom-frame-changes" class="bottom-text frame">
                        BOTTOM TEXT
                     </p>
-                </div>
             </div>
             <section class="download-button">
                 <button class="download-icon" id="download-icon">
@@ -202,39 +201,39 @@
                     <h3>FILTROS</h3>
                     <div class="panel-control-filters">
                         <label for="brillo-range">BRILLO</label>
-                        <input id="brillo-range" type="range">
+                        <input id="brillo-range" type="range" step="0.1" value="1" min="0" max="1">
                     </div>
                     <div class="panel-control-filters">
                         <label for="opacidad-range">OPACIDAD</label>
-                        <input id="opacidad-range" type="range">
+                        <input id="opacidad-range" type="range" step="0.1" min="0" value="1" max="1">
                     </div>
                     <div class="panel-control-filters">
                         <label for="contraste-range">CONTRASTE</label>
-                        <input id="contraste-range" type="range">
+                        <input id="contraste-range" type="range" value="100" min="100" max="1000">
                     </div>
                     <div class="panel-control-filters">
                         <label for="desenfoque-range">DESENFOQUE</label>
-                        <input id="desenfoque-range" type="range">
+                        <input id="desenfoque-range" type="range" step="0.1" min="0" value="0" max="10">
                     </div>
                     <div class="panel-control-filters">
                         <label for="escala-de-grises-range">ESCALA DE GRISESs</label>
-                        <input id="escala-de-grises-range" type="range">
+                        <input id="escala-de-grises-range" type="range" value="0" min="0" max="100">
                     </div>
                     <div class="panel-control-filters">
                         <label for="sepia-range">SEPIA</label>
-                        <input id="sepia-range" type="range">
+                        <input id="sepia-range" type="range" min="0" value="0" max="100">
                     </div>
                     <div class="panel-control-filters">
                         <label for="hue-range">HUE</label>
-                        <input id="hue-range" type="range">
+                        <input id="hue-range" type="range" min="0" value="0" max="360">
                     </div>
                     <div class="panel-control-filters">
                         <label for="saturado-range">SATURADO</label>
-                        <input id="saturado-range" type="range">
+                        <input id="saturado-range" type="range" step="10" min="100" value="100" max="1000">
                     </div>
                     <div class="panel-control-filters">
                         <label for="negativo-range">NEGATIVO</label>
-                        <input id="negativo-range" type="range">
+                        <input id="negativo-range" type="range" step="0.1" min="0" value="0" max="1">
                     </div>
                 </div>
                 <button id="default-filters-button" class="button-reset" type="reset">

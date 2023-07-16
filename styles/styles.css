@@ -89,6 +89,7 @@ main{
    }
 .main-container{
     display: flex;
+    flex-direction: column;
     width: 100%;
     justify-content: center;
     max-width: 260px;
@@ -99,8 +100,6 @@ main{
     background-size: cover;
     background-color: #000;
     flex-grow: 1;
-    flex-direction: column;
-    justify-content: space-between;
 }
 .frame{
     color: rgb(0, 0, 0);
