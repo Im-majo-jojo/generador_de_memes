@@ -37,7 +37,7 @@
                         </button>
                     </li>
                     <li>
-                        <button class="light-icon">
+                        <button class="light-icon" onclick="toggleTittle()">
                             Modo oscuro
                         </button>
                     </li>
@@ -106,13 +106,14 @@
                 <div class="font-section">
                     <input type="number" aria-label="Tamaño de fuente" id="text-size-input" min="12" value="40" class="text-size-input">
                     <div class="button-text-alignment">
-                        <button id="left-align-text" class="button-alignment left-icon" aria-label="alinear texto a la izquierda">
+                        <button id="left-align-text" class="left-align-text
+                        button-alignment left-icon" aria-label="alinear texto a la izquierda">
                             <i class="fa-solid fa-align-left"></i>
                         </button>
-                        <button id="center-align-text" class="button-alignment center-icon" aria-label="alinear texto al centro">
+                        <button id="center-align-text" class="center-align-text button-alignment center-icon" aria-label="alinear texto al centro">
                             <i class="fa-solid fa-align-center"></i>
                         </button>
-                        <button id="right-align-text" class="button-alignment right-icon" aria-label="alinear texto a la derecha">
+                        <button id="right-align-text" class="right-align-text button-alignment right-icon" aria-label="alinear texto a la derecha">
                             <i class="fa-solid fa-align-right"></i>
                         </button>
                     </div>
@@ -140,13 +141,13 @@
                 <div class="contour-text">
                     <h3>CONTORNO</h3>
                     <div class="button-text-contour">
-                        <button id="none-contour-text" class="button-none button-contour" aria-label="ningun contorno">
+                        <button id="none-contour-text" class="none-contour-text button-none button-contour" aria-label="ningun contorno">
                             Ninguno
                         </button>
-                        <button id="ligth-contour-text" class="button-light button-contour" aria-label="contorno claro">
+                        <button id="ligth-contour-text" class="ligth-contour-text button-light button-contour" aria-label="contorno claro">
                             Claro
                         </button>
-                        <button id="dark-contour-text" class="button-dark button-contour" aria-label="contorno oscuro">
+                        <button id="dark-contour-text" class="dark-contour-text button-dark button-contour" aria-label="contorno oscuro">
                             Oscuro
                         </button>
                     </div>
@@ -157,7 +158,7 @@
                 </div>
                 <div class="line-height">
                     <h3>INTERLINEADO</h3>
-                    <select id="select-line-height" aria-label="seleccion de familia de fuente">
+                    <select id="select-line-height" class="select-line-height" aria-label="seleccion de familia de fuente">
                         <option value="0.8">0.8</option>
                         <option value="1">1</option>
                         <option value="1.2">1.2</option>
@@ -187,7 +188,7 @@
                         </div>
                         <div class="panel-select">
                             <select class="select-mode" id="select-mode" aria-label="modo-de-mezcla">
-                                <option value="unset">Ninguno</option>
+                               <option value="unset">Ninguno</option>
                                 <option value="lighten">Aclarar</option>
                                 <option value="darken">Oscurecer</option>
                                 <option value="difference">Diferencia</option>

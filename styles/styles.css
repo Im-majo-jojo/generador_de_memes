@@ -196,14 +196,14 @@ select{
 .select-mode,
 .select-font-family,
 .padding-text-value,
-#left-align-text,
-#center-align-text,
-#right-align-text,
-#text-size-input,
-#none-contour-text,
-#ligth-contour-text,
-#dark-contour-text,
-#select-line-height{
+.left-align-text,
+.center-align-text,
+.right-align-text,
+.text-size-input,
+.none-contour-text,
+.ligth-contour-text,
+.dark-contour-text,
+.select-line-height{
     height: 36px;
     background-color: #3a3e49;
     align-items: center;
@@ -389,7 +389,6 @@ input[type="range"]{
 .fields-color{  
     background-color: #e0e0e0;
 }
-
 .select-mode-light,
 .select-font-family-light,
 .padding-text-value-light,
@@ -403,18 +402,7 @@ input[type="range"]{
 #select-line-height-light{
     background-color: #e0e0e0;
     color: #424242;
-}/*
-input,
-button,
-select{
-    border: 0;
-    background-color: transparent;
-    color: #fff;
-    outline: 0;
 }
-input[type="range"]{
-    background-color: #5a5c68;
-}*/
 .button-reset-light{
     background-color: #3a3e49;
  }
