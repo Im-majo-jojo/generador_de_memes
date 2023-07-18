@@ -150,8 +150,14 @@ bottomTextInput.oninput = ()=>{
 
 //fonts
 
+const selectFontFamily = document.querySelector("#select-font-family")
 
+const fontSelected = () => {
+    topFrameText.style.fontFamily = `${selectFontFamily.value}`
+    bottomFrameText.style.fontFamily = `${selectFontFamily.value}`
+}
 
+selectFontFamily.addEventListener("change", () => fontSelected())
 
 //reset button
 function resetFunction() {
