@@ -149,17 +149,17 @@ const backgroundFramesVisibility = document.querySelector("#background-visibilit
 
 backgroundFramesVisibility.addEventListener("change", ()=>{
         if (backgroundFramesVisibility.checked) {
-            topFrameText.classList.add("frame-background-top");
+            topFrameText.classList.add("top-position-frame");
+            console.log("activo");
         } else {
-            topFrameText.classList.remove("frame-background-top");
-            console.log(topFrameText);
-        }
+            topFrameText.classList.remove("top-position-frame");
+         }
 } )
 backgroundFramesVisibility.addEventListener("change", ()=>{
         if (backgroundFramesVisibility.checked) {
-            bottomFrameText.classList.add("frame-background-bottom");
+            bottomFrameText.classList.add("bottom-position-frame");
        } else {
-            bottomFrameText.classList.remove("frame-background-bottom");
+            bottomFrameText.classList.remove("bottom-position-frame");
             console.log("funchiono2");
        }
 } )
@@ -210,4 +210,3 @@ backgroundFramesVisibility.addEventListener("change", ()=>{
 // }
 // bottomTextInput.oninput = ()=>{
 //     bottomFrameText.innerHTML = bottomTextInput.value
-// }

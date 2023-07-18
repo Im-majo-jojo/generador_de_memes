@@ -101,7 +101,7 @@ main{
     background-size: cover;
     background-color: #000;
     flex-grow: 1;
-    position: relative;
+
 }
 .frame{
     color: rgb(0, 0, 0);
@@ -117,12 +117,26 @@ main{
 .frame-checkbox{
     display: none;
 }
-.frame-background-top{
+.top-position-frame{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: transparent;
+}
+.bottom-position-frame{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: transparent;
+}
+/* .frame-background-top{
     background-color: transparent;
     position: absolute;
+    top: 0;
   
-    /* right: 0;
-    left: 0; */
 }
 .frame-background-bottom{
     background-color: transparent;
@@ -130,7 +144,7 @@ main{
  
     /* right: 0;
     left: 0; */
-}
+} */
 .frame-left-align {
     justify-content: left;    
 }
