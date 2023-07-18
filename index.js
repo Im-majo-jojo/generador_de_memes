@@ -171,35 +171,38 @@ backgroundFramesVisibility.addEventListener("change", ()=>{
 
 //alignment buttons0
 
-//left-align-text
-// const leftAlignment = document.querySelector("#left-align-text")
-// const centertAlignment = document.querySelector("#center-align-text")
-// const rightAlignment = document.querySelector("#right-align-text")
 
-// leftAlignment.addEventListener("click", () => {
-//     topFrameText.classList.toggle("frame-left-align");
-//     bottomFrameText.classList.toggle("frame-left-align");
-//     // topFrameText.classList.remove("frame-center-align");
-//     // topFrameText.classList.remove("frame-right-align");
-//     // bottomFrameText.classList.add("frame-right-align");
-//     // bottomFrameText.classList.add("frame-right-align");
-// })
-// centertAlignment.addEventListener("click", () => {
-//     topFrameText.classList.toggle("frame-center-align");
-//     bottomFrameText.classList.toggle("frame-center-align");
-//     // topFrameText.classList.remove("frame-left-align");
-//     // topFrameText.classList.remove("frame-right-align");
-//     // bottomFrameText.classList.add("frame-right-align");
-//     // bottomFrameText.classList.add("frame-right-align");
-// })
-// rightAlignment.addEventListener("click", () => {
-//     topFrameText.classList.toggle("frame-right-align");
-//     bottomFrameText.classList.toggle("frame-right-align");
-//     // topFrameText.classList.remove("frame-center-align");
-//     // topFrameText.classList.remove("frame-left-align");
-//     // bottomFrameText.classList.add("frame-right-align");
-//     // bottomFrameText.classList.add("frame-right-align");
-// })
+const leftAlignment = document.querySelector("#left-align-text")
+const centertAlignment = document.querySelector("#center-align-text")
+const rightAlignment = document.querySelector("#right-align-text")
+
+leftAlignment.addEventListener("click", () => {
+    topFrameText.classList.add("frame-left-align");
+    bottomFrameText.classList.add("frame-left-align");
+    topFrameText.classList.remove("frame-center-align");
+    topFrameText.classList.remove("frame-right-align");
+    bottomFrameText.classList.remove("frame-center-align");
+    bottomFrameText.classList.remove("frame-right-align");
+
+})
+centertAlignment.addEventListener("click", () => {
+    topFrameText.classList.add("frame-center-align");
+    bottomFrameText.classList.add("frame-center-align");
+
+    topFrameText.classList.remove("frame-left-align");
+    topFrameText.classList.remove("frame-right-align");
+    bottomFrameText.classList.remove("frame-left-align");
+    bottomFrameText.classList.remove("frame-right-align");
+})
+rightAlignment.addEventListener("click", () => {
+    topFrameText.classList.add("frame-right-align");
+    bottomFrameText.classList.add("frame-right-align");
+
+    topFrameText.classList.remove("frame-center-align");
+    topFrameText.classList.remove("frame-left-align");
+    bottomFrameText.classList.remove("frame-center-align");
+    bottomFrameText.classList.remove("frame-left-align");
+})
 
 // const topFrameText = document.querySelector("#top-frame-changes")
 // const bottomFrameText = document.querySelector("#bottom-frame-changes")

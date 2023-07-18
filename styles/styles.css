@@ -132,19 +132,6 @@ main{
     left: 0;
     background-color: transparent;
 }
-/* .frame-background-top{
-    background-color: transparent;
-    position: absolute;
-    top: 0;
-  
-}
-.frame-background-bottom{
-    background-color: transparent;
-    position: absolute;
- 
-    /* right: 0;
-    left: 0; */
-} */
 .frame-left-align {
     justify-content: left;    
 }
