@@ -144,9 +144,7 @@ const downloadMeme = () => {
     });
 };
 //checkmark nobakcground frames???????????
-
 const backgroundFramesVisibility = document.querySelector("#background-visibility")
-
 backgroundFramesVisibility.addEventListener("change", ()=>{
         if (backgroundFramesVisibility.checked) {
             topFrameText.classList.add("top-position-frame");
@@ -163,15 +161,7 @@ backgroundFramesVisibility.addEventListener("change", ()=>{
             console.log("funchiono2");
        }
 } )
-
-
-
-
-
-
 //alignment buttons0
-
-
 const leftAlignment = document.querySelector("#left-align-text")
 const centertAlignment = document.querySelector("#center-align-text")
 const rightAlignment = document.querySelector("#right-align-text")
@@ -203,7 +193,33 @@ rightAlignment.addEventListener("click", () => {
     bottomFrameText.classList.remove("frame-center-align");
     bottomFrameText.classList.remove("frame-left-align");
 })
-
+//contour button
+// text-contour
+const buttonContourDark = document.querySelector("#dark-contour-text")
+buttonContourDark.onclick = ()=>{
+    topFrameText.classList.add("text-contour-dark");
+    topFrameText.classList.remove("text-contour-light");
+    bottomFrameText.classList.add("text-contour-dark");
+    bottomFrameText.classList.remove("text-contour-light");
+    console.log("iwork1")
+}
+const buttonContourLight = document.querySelector("#ligth-contour-text")
+buttonContourLight.onclick = ()=>{
+    topFrameText.classList.add("text-contour-light");
+    topFrameText.classList.remove("text-contour-dark");
+    bottomFrameText.classList.add("text-contour-light");
+    bottomFrameText.classList.remove("text-contour-dark");
+    console.log("iwork2")
+}
+const buttonContourNone = document.querySelector("#none-contour-text")
+buttonContourNone.onclick = ()=>{
+    topFrameText.classList.remove("text-contour-dark");
+    topFrameText.classList.remove("text-contour-light");
+    bottomFrameText.classList.remove("text-contour-dark");
+    bottomFrameText.classList.remove("text-contour-light");
+    console.log("iwork3")
+}
+//topFrameText
 // const topFrameText = document.querySelector("#top-frame-changes")
 // const bottomFrameText = document.querySelector("#bottom-frame-changes")
 // const topTextInput = document.querySelector("#top-text-field")

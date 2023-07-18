@@ -141,6 +141,13 @@ main{
 .frame-right-align {
     justify-content: right;    
 }
+.text-contour-dark{
+    -webkit-text-stroke: 2px black;
+}
+.text-contour-light{
+    -webkit-text-stroke: 2px white;
+}
+
 .download-button button{
     background-color: #2f7d32;
     color: #fff;
