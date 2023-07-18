@@ -1,10 +1,4 @@
-//const inputTopText = document.querySelector(".top-text")
 
-//inputTopText.oninput = () => {
-//    inputTopText.innerHTML = '${inputTopText.value}'
-//}
-
-//-------------------------------
 //buttons
 const imageMenu = document.querySelector(".image-icon")
 const textMenu = document.querySelector(".text-icon")
@@ -24,7 +18,6 @@ textMenu.addEventListener("click", ()=>{
 //----------------------------
 //modo claro
 const colorMode = document.querySelector(".light-icon")
-
 function toggleTittle() {
     if (colorMode.innerHTML === "Modo claro") {
         colorMode.innerHTML = "Modo oscuro";
@@ -32,7 +25,6 @@ function toggleTittle() {
         colorMode.innerHTML = "Modo claro";
     }
   }
-
 colorMode.addEventListener("click", () => {
     const segmentColor = document.querySelector(".second-segment").classList.toggle("second-segment-light")
     const headerColor = document.querySelector(".header").classList.toggle("background-light")
@@ -55,7 +47,6 @@ colorMode.addEventListener("click", () => {
     const darkContourText = document.getElementById("dark-contour-text").classList.toggle("background-light")
     const selectLineHeight = document.getElementById("select-line-height").classList.toggle("background-light")  
 })
-
 //url change
 const mainImage = document.querySelector(".main-image")
 const inputUrlMode = document.querySelector("#url-field")
@@ -66,27 +57,21 @@ inputUrlMode.addEventListener ( "input", () => {
 //color selection text
 const colorBackgroundSelection = document.getElementById("background-text-color")
 const colorFontSelection = document.getElementById("color-text-color")
-
 const topFrameMeme = document.querySelector(".top-text")
 const bottomFrameMeme = document.querySelector(".bottom-text")
-
 const colorFontFrames = (e) => {
     const colorFondoFont = e.target.value;
     topFrameMeme.style.color = colorFondoFont;
     bottomFrameMeme.style.color = colorFondoFont;
 }
-
 colorFontSelection.addEventListener(`input`, (e) => colorFontFrames(e))
-
 const colorBackgroundFrames = (e) => {
     const colorFondoBackground = e.target.value;
     topFrameMeme.style.backgroundColor = colorFondoBackground;
     bottomFrameMeme.style.backgroundColor = colorFondoBackground;
 }
-
 colorBackgroundSelection.addEventListener(`input`, (e) => colorBackgroundFrames(e))
 // cambios de imagen de fondo/filtros
-//brillo
 const inputBrightness = document.querySelector("#brillo-range")
 const inputOpacity =document.querySelector("#opacidad-range")
 const inputContrast =document.querySelector("#contraste-range")
@@ -96,12 +81,10 @@ const inputSepia =document.querySelector("#sepia-range")
 const inputHueRotate =document.querySelector("#hue-range")
 const inputSaturate =document.querySelector("#saturado-range")
 const inputInvert =document.querySelector("#negativo-range")
-
 const filtros = (e) => {
     console.log(e.target.value)
     mainImage.style.filter = `brightness(${inputBrightness.value}) opacity(${inputOpacity.value}) blur(${inputBlur.value}px) contrast(${inputContrast.value}%) grayscale(${inputGrayscale.value}%) hue-rotate(${inputHueRotate.value}deg) sepia(${inputSepia.value}%) saturate(${inputSaturate.value}%) invert(${inputInvert.value})`
 }
-
 inputBrightness.addEventListener(`input`, (e) => filtros(e))
 inputOpacity.addEventListener(`input`, (e) => filtros(e))
 inputContrast.addEventListener(`input`, (e) => filtros(e))
@@ -111,28 +94,20 @@ inputSepia.addEventListener(`input`, (e) => filtros(e))
 inputHueRotate.addEventListener(`input`, (e) => filtros(e))
 inputSaturate.addEventListener(`input`, (e) => filtros(e))
 inputInvert.addEventListener(`input`, (e) => filtros(e))
-
 //text in frames
-
 const topFrameText = document.querySelector("#top-frame-changes")
 const bottomFrameText = document.querySelector("#bottom-frame-changes")
-
 const topTextInput = document.querySelector("#top-text-field")
 const bottomTextInput = document.querySelector("#bottom-text-field")
-
 topTextInput.oninput = () => {
     topFrameText.innerHTML = topTextInput.value
 }
-
 bottomTextInput.oninput = ()=>{
     bottomFrameText.innerHTML = bottomTextInput.value
 }
- //checkmar nonframes
-
+ //checkmark nonframes
  const frameTopCheckBox = document.querySelector("#text-visibility-top")
  const frameBottomCheckBox = document.querySelector("#text-visibility-bottom")
-
-
  frameTopCheckBox.addEventListener("change", ()=>{
             if (frameTopCheckBox.checked) {
                 topFrameText.classList.add("frame-checkbox");
@@ -147,67 +122,92 @@ bottomTextInput.oninput = ()=>{
                 bottomFrameText.classList.remove("frame-checkbox");
         }
 } )
-
 //fonts
-
 const selectFontFamily = document.querySelector("#select-font-family")
-
 const fontSelected = () => {
     topFrameText.style.fontFamily = `${selectFontFamily.value}`
     bottomFrameText.style.fontFamily = `${selectFontFamily.value}`
 }
-
 selectFontFamily.addEventListener("change", () => fontSelected())
-
 //reset button
 function resetFunction() {
     const resetButton = document.querySelector("#aside-form").reset()
     console.log("chifunchono")
 }
-
-
 //download button
 const downloadButton = document.querySelector("#download-icon")
 const memeImage = document.querySelector("#meme-container")
-
 downloadButton.addEventListener("click", () => downloadMeme())
-
 const downloadMeme = () => {
     domtoimage.toBlob(memeImage).then(function (blob) {
     window.saveAs(blob, "mi-meme.png");
     });
 };
+//checkmark nobakcground frames???????????
+
+const backgroundFramesVisibility = document.querySelector("#background-visibility")
+
+backgroundFramesVisibility.addEventListener("change", ()=>{
+        if (backgroundFramesVisibility.checked) {
+            topFrameText.classList.add("frame-background-top");
+        } else {
+            topFrameText.classList.remove("frame-background-top");
+            console.log(topFrameText);
+        }
+} )
+backgroundFramesVisibility.addEventListener("change", ()=>{
+        if (backgroundFramesVisibility.checked) {
+            bottomFrameText.classList.add("frame-background-bottom");
+       } else {
+            bottomFrameText.classList.remove("frame-background-bottom");
+            console.log("funchiono2");
+       }
+} )
 
 
 
-// const downloadButton = document.getElementById("download-btn");
-// const meme = document.getElementById("meme-container");
-
-// downloadButton.addEventListener("click", () => downloadMeme());
-
-// const downloadMeme = () => {
-//   domtoimage.toBlob(meme).then(function (blob) {
-//     window.saveAs(blob, "mi-meme.png");
-//   });
-// };
 
 
 
-//  const colorMode = document.querySelector(".light-icon")
+//alignment buttons0
 
-// function toggleTittle() {
-//     if (colorMode.innerHTML === "Modo claro") {
-//         colorMode.innerHTML = "Modo oscuro";
-//     } else {
-//         colorMode.innerHTML = "Modo claro";
-//     }
-//   }
-//  const segmentColor = document.querySelector(".second-segment").classList.toggle("second-segment-light")
+//left-align-text
+// const leftAlignment = document.querySelector("#left-align-text")
+// const centertAlignment = document.querySelector("#center-align-text")
+// const rightAlignment = document.querySelector("#right-align-text")
 
-// const mainImage = document.querySelector(".main-image")
-// const inputUrlMode = document.querySelector("#url-field")
-
-// inputUrlMode.addEventListener ( "input", () => {
-//     mainImage.style.backgroundImage =  `url('${inputUrlMode.value}')`
+// leftAlignment.addEventListener("click", () => {
+//     topFrameText.classList.toggle("frame-left-align");
+//     bottomFrameText.classList.toggle("frame-left-align");
+//     // topFrameText.classList.remove("frame-center-align");
+//     // topFrameText.classList.remove("frame-right-align");
+//     // bottomFrameText.classList.add("frame-right-align");
+//     // bottomFrameText.classList.add("frame-right-align");
+// })
+// centertAlignment.addEventListener("click", () => {
+//     topFrameText.classList.toggle("frame-center-align");
+//     bottomFrameText.classList.toggle("frame-center-align");
+//     // topFrameText.classList.remove("frame-left-align");
+//     // topFrameText.classList.remove("frame-right-align");
+//     // bottomFrameText.classList.add("frame-right-align");
+//     // bottomFrameText.classList.add("frame-right-align");
+// })
+// rightAlignment.addEventListener("click", () => {
+//     topFrameText.classList.toggle("frame-right-align");
+//     bottomFrameText.classList.toggle("frame-right-align");
+//     // topFrameText.classList.remove("frame-center-align");
+//     // topFrameText.classList.remove("frame-left-align");
+//     // bottomFrameText.classList.add("frame-right-align");
+//     // bottomFrameText.classList.add("frame-right-align");
 // })
 
+// const topFrameText = document.querySelector("#top-frame-changes")
+// const bottomFrameText = document.querySelector("#bottom-frame-changes")
+// const topTextInput = document.querySelector("#top-text-field")
+// const bottomTextInput = document.querySelector("#bottom-text-field")
+// topTextInput.oninput = () => {
+//     topFrameText.innerHTML = topTextInput.value
+// }
+// bottomTextInput.oninput = ()=>{
+//     bottomFrameText.innerHTML = bottomTextInput.value
+// }

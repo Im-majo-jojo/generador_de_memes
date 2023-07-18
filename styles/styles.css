@@ -94,12 +94,14 @@ main{
     justify-content: center;
     max-width: 260px;
     max-height: 260px;
+    position: relative;
 }
 .main-image{
     display: flex;
     background-size: cover;
     background-color: #000;
     flex-grow: 1;
+    position: relative;
 }
 .frame{
     color: rgb(0, 0, 0);
@@ -111,9 +113,32 @@ main{
     display: flex;
     justify-content: center;
     padding: 5px 0;
-}
+} 
 .frame-checkbox{
     display: none;
+}
+.frame-background-top{
+    background-color: transparent;
+    position: absolute;
+  
+    /* right: 0;
+    left: 0; */
+}
+.frame-background-bottom{
+    background-color: transparent;
+    position: absolute;
+ 
+    /* right: 0;
+    left: 0; */
+}
+.frame-left-align {
+    justify-content: left;    
+}
+.frame-center-align {
+    justify-content: center;    
+}
+.frame-right-align {
+    justify-content: right;    
 }
 .download-button button{
     background-color: #2f7d32;
