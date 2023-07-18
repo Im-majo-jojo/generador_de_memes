@@ -13,7 +13,20 @@
     <script src="https://kit.fontawesome.com/8cc6b6e6f6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href=
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
-</link>
+    </link>
+    <!--download-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+      integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+      integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <!-- title -->
     <title>Generador de memes</title>
 </head>
@@ -47,7 +60,7 @@
     </div>
     <div class="second-segment">
         <main>
-            <div class="main-container" style="height: 500px;">
+            <div class="main-container" id="meme-container" style="height: 500px;">
                     <p id="top-frame-changes" class="top-text frame">
                         TOP TEXT
                     </p>
@@ -73,7 +86,7 @@
                 </div>
                 <div class="text-check-box">
                     <form>
-                        <input id="text-visibility" type="checkbox">
+                        <input id="text-visibility-top" type="checkbox">
                         <label for="text-visibility">Sin texto superior</label>
                     </form>
                 </div>
@@ -85,7 +98,7 @@
                 </div>
                 <div class="text-check-box">
                     <form>
-                        <input id="text-visibility" type="checkbox">
+                        <input id="text-visibility-bottom" type="checkbox">
                         <label for="text-visibility">Sin texto inferior</label>
                     </form>
                 </div>
@@ -173,7 +186,7 @@
                 <h2 class="aside-title">IMAGEN</h2>
                 <div class="control-panel url-field-div">
                     <h3>URL</h3>
-                    <form>
+                    <form id="aside-form">
                         <input id="url-field" class="url-field" type="url" aria-label="url field">
                     </form>
                 </div>
@@ -181,11 +194,12 @@
                     <h3>FONDO</h3>
                     <div class="control-panel-columns">
                         <div class="panel-color">
-                            <form>
+                            <form id="aside-form">
                                 <input id="fondo-color" type="color" value="#ffffff" aria-label="color-de-fondo">
                             </form>
                         </div>
                         <div class="panel-select">
+                            <form id="aside-form">
                             <select class="select-mode" id="select-mode" aria-label="modo-de-mezcla">
                                <option value="unset">Ninguno</option>
                                 <option value="lighten">Aclarar</option>
@@ -194,51 +208,41 @@
                                 <option value="luminosity">Luminosidad</option>
                                 <option value="multiply">Multiplicar</option>
                             </select>
+                            </form>
                         </div>
                     </div>
                 </div>
                 <div class="control-panel filters">
                     <h3>FILTROS</h3>
                     <div class="panel-control-filters">
+                        <form id="aside-form">
                         <label for="brillo-range">BRILLO</label>
                         <input id="brillo-range" type="range" step="0.1" value="1" min="0" max="1">
-                    </div>
-                    <div class="panel-control-filters">
                         <label for="opacidad-range">OPACIDAD</label>
                         <input id="opacidad-range" type="range" step="0.1" min="0" value="1" max="1">
-                    </div>
-                    <div class="panel-control-filters">
                         <label for="contraste-range">CONTRASTE</label>
                         <input id="contraste-range" type="range" value="100" min="100" max="1000">
-                    </div>
-                    <div class="panel-control-filters">
                         <label for="desenfoque-range">DESENFOQUE</label>
                         <input id="desenfoque-range" type="range" step="0.1" min="0" value="0" max="10">
-                    </div>
-                    <div class="panel-control-filters">
                         <label for="escala-de-grises-range">ESCALA DE GRISESs</label>
                         <input id="escala-de-grises-range" type="range" value="0" min="0" max="100">
-                    </div>
-                    <div class="panel-control-filters">
                         <label for="sepia-range">SEPIA</label>
                         <input id="sepia-range" type="range" min="0" value="0" max="100">
-                    </div>
-                    <div class="panel-control-filters">
                         <label for="hue-range">HUE</label>
                         <input id="hue-range" type="range" min="0" value="0" max="360">
-                    </div>
-                    <div class="panel-control-filters">
                         <label for="saturado-range">SATURADO</label>
                         <input id="saturado-range" type="range" step="10" min="100" value="100" max="1000">
-                    </div>
-                    <div class="panel-control-filters">
                         <label for="negativo-range">NEGATIVO</label>
                         <input id="negativo-range" type="range" step="0.1" min="0" value="0" max="1">
+                        <button id="default-filters-button" class="button-reset" onclick="resetFunction()" type="reset">
+                            Reestablecer filtros
+                        </button>
+                        </form>
                     </div>
                 </div>
-                <button id="default-filters-button" class="button-reset" type="reset">
-                    Reestablecer filtros
-                </button>
+                <form id="aside-form">
+ 
+                </form>
             </section>
         </aside>
     </div>

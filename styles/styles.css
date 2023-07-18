@@ -112,6 +112,9 @@ main{
     justify-content: center;
     padding: 5px 0;
 }
+.frame-checkbox{
+    display: none;
+}
 .download-button button{
     background-color: #2f7d32;
     color: #fff;
@@ -209,7 +212,7 @@ select{
     border-radius: 3px;
     padding-left: 8px;
 }
-.panel-control-filters{
+.panel-control-filters input{
     display: flex;
     flex-direction: column;
     margin-bottom: 12px;

@@ -112,6 +112,92 @@ inputHueRotate.addEventListener(`input`, (e) => filtros(e))
 inputSaturate.addEventListener(`input`, (e) => filtros(e))
 inputInvert.addEventListener(`input`, (e) => filtros(e))
 
+//text in frames
+
+const topFrameText = document.querySelector("#top-frame-changes")
+const bottomFrameText = document.querySelector("#bottom-frame-changes")
+
+const topTextInput = document.querySelector("#top-text-field")
+const bottomTextInput = document.querySelector("#bottom-text-field")
+
+topTextInput.oninput = () => {
+    topFrameText.innerHTML = topTextInput.value
+}
+
+bottomTextInput.oninput = ()=>{
+    bottomFrameText.innerHTML = bottomTextInput.value
+}
+ //checkmar nonframes
+
+ const frameTopCheckBox = document.querySelector("#text-visibility-top")
+ const frameBottomCheckBox = document.querySelector("#text-visibility-bottom")
+
+
+ frameTopCheckBox.addEventListener("change", ()=>{
+            if (frameTopCheckBox.checked) {
+                topFrameText.classList.add("frame-checkbox");
+        } else {
+                topFrameText.classList.remove("frame-checkbox");
+        }
+ } )
+ frameBottomCheckBox.addEventListener("change", ()=>{
+            if (frameBottomCheckBox.checked) {
+                bottomFrameText.classList.add("frame-checkbox");
+        } else {
+                bottomFrameText.classList.remove("frame-checkbox");
+        }
+} )
+
+//fonts
+
+
+
+
+//reset button
+function resetFunction() {
+    const resetButton = document.querySelector("#aside-form").reset()
+    console.log("chifunchono")
+}
+
+
+//download button
+const downloadButton = document.querySelector("#download-icon")
+const memeImage = document.querySelector("#meme-container")
+
+downloadButton.addEventListener("click", () => downloadMeme())
+
+const downloadMeme = () => {
+    domtoimage.toBlob(memeImage).then(function (blob) {
+    window.saveAs(blob, "mi-meme.png");
+    });
+};
+
+
+
+// const downloadButton = document.getElementById("download-btn");
+// const meme = document.getElementById("meme-container");
+
+// downloadButton.addEventListener("click", () => downloadMeme());
+
+// const downloadMeme = () => {
+//   domtoimage.toBlob(meme).then(function (blob) {
+//     window.saveAs(blob, "mi-meme.png");
+//   });
+// };
+
+
+
+//  const colorMode = document.querySelector(".light-icon")
+
+// function toggleTittle() {
+//     if (colorMode.innerHTML === "Modo claro") {
+//         colorMode.innerHTML = "Modo oscuro";
+//     } else {
+//         colorMode.innerHTML = "Modo claro";
+//     }
+//   }
+//  const segmentColor = document.querySelector(".second-segment").classList.toggle("second-segment-light")
+
 // const mainImage = document.querySelector(".main-image")
 // const inputUrlMode = document.querySelector("#url-field")
 
