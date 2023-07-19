@@ -165,7 +165,6 @@ backgroundFramesVisibility.addEventListener("change", ()=>{
 const leftAlignment = document.querySelector("#left-align-text")
 const centertAlignment = document.querySelector("#center-align-text")
 const rightAlignment = document.querySelector("#right-align-text")
-
 leftAlignment.addEventListener("click", () => {
     topFrameText.classList.add("frame-left-align");
     bottomFrameText.classList.add("frame-left-align");
@@ -173,12 +172,10 @@ leftAlignment.addEventListener("click", () => {
     topFrameText.classList.remove("frame-right-align");
     bottomFrameText.classList.remove("frame-center-align");
     bottomFrameText.classList.remove("frame-right-align");
-
 })
 centertAlignment.addEventListener("click", () => {
     topFrameText.classList.add("frame-center-align");
     bottomFrameText.classList.add("frame-center-align");
-
     topFrameText.classList.remove("frame-left-align");
     topFrameText.classList.remove("frame-right-align");
     bottomFrameText.classList.remove("frame-left-align");
@@ -187,7 +184,6 @@ centertAlignment.addEventListener("click", () => {
 rightAlignment.addEventListener("click", () => {
     topFrameText.classList.add("frame-right-align");
     bottomFrameText.classList.add("frame-right-align");
-
     topFrameText.classList.remove("frame-center-align");
     topFrameText.classList.remove("frame-left-align");
     bottomFrameText.classList.remove("frame-center-align");
@@ -219,6 +215,22 @@ buttonContourNone.onclick = ()=>{
     bottomFrameText.classList.remove("text-contour-light");
     console.log("iwork3")
 }
+
+//font size
+const selectFontSize = document.querySelector("#text-size-input")
+const fontSizeSelected = () => {
+    topFrameText.style.fontSize = `${selectFontSize.value}px`
+    bottomFrameText.style.fontSize = `${selectFontSize.value}px`
+}
+selectFontSize.addEventListener("change", () => fontSizeSelected())
+
+//lineheight
+const frameTextPadding = document.querySelector("#padding-text-value")
+const paddingText = () => {
+    topFrameText.style.fontSize = `${frameTextPadding.value}px`
+    bottomFrameText.style.fontSize = `${frameTextPadding.value}px`
+}
+frameTextPadding.addEventListener("change", () => paddingText())
 //topFrameText
 // const topFrameText = document.querySelector("#top-frame-changes")
 // const bottomFrameText = document.querySelector("#bottom-frame-changes")
