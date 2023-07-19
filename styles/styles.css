@@ -75,8 +75,7 @@
     content: '\f019';
     font: var(--fa-font-solid);
 }
-/*end icons*/
-/*/starts main*/
+/*main*/
 main{
     width: 100%;
     height: 100%;
@@ -101,7 +100,6 @@ main{
     background-size: cover;
     background-color: #000;
     flex-grow: 1;
-
 }
 .frame{
     color: rgb(0, 0, 0);
@@ -132,22 +130,6 @@ main{
     left: 0;
     background-color: transparent;
 }
-.frame-left-align {
-    justify-content: left;    
-}
-.frame-center-align {
-    justify-content: center;    
-}
-.frame-right-align {
-    justify-content: right;    
-}
-.text-contour-dark{
-    -webkit-text-stroke: 2px black;
-}
-.text-contour-light{
-    -webkit-text-stroke: 2px white;
-}
-
 .download-button button{
     background-color: #2f7d32;
     color: #fff;

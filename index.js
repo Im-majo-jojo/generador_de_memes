@@ -1,4 +1,3 @@
-
 //buttons
 const imageMenu = document.querySelector(".image-icon")
 const textMenu = document.querySelector(".text-icon")
@@ -200,7 +199,6 @@ const fontSizeSelected = () => {
     bottomFrameText.style.fontSize = `${selectFontSize.value}px`
 }
 selectFontSize.addEventListener("change", () => fontSizeSelected())
-
 //padding text
 const frameTextPadding = document.querySelector("#padding-text-value")
 const paddingText = () => {
@@ -208,7 +206,6 @@ const paddingText = () => {
     bottomFrameText.style.fontSize = `${frameTextPadding.value}px`
 }
 frameTextPadding.addEventListener("change", () => paddingText())
-
 //lineheight
 const frameTextHeightLine = document.querySelector("#select-line-height")
 const lineHeightText = () => {
@@ -216,13 +213,18 @@ const lineHeightText = () => {
     bottomFrameText.style.lineHeight = `${frameTextHeightLine.value}em`
 }
 frameTextHeightLine.addEventListener("change", () => lineHeightText())
-//topFrameText
-// const topFrameText = document.querySelector("#top-frame-changes")
-// const bottomFrameText = document.querySelector("#bottom-frame-changes")
-// const topTextInput = document.querySelector("#top-text-field")
-// const bottomTextInput = document.querySelector("#bottom-text-field")
-// topTextInput.oninput = () => {
-//     topFrameText.innerHTML = topTextInput.value
-// }
-// bottomTextInput.oninput = ()=>{
-//     bottomFrameText.innerHTML = bottomTextInput.value
+//image background color
+const backgrounImageColorPicker = document.querySelector("#fondo-color")
+const colorBackgroundImage = (e) => {
+        const backgroundColorValue = e.target.value;
+        mainImage.style.backgroundColor = `${backgroundColorValue}`;
+        console.log(backgroundColorValue);
+    }
+backgrounImageColorPicker.addEventListener(`input`, (e) => colorBackgroundImage(e))
+//mod image color
+const backgrounImageModeSelect = document.querySelector("#select-mode")
+backgrounImageModeSelect.addEventListener("change", () => modeSelected())
+const modeSelected = () => {
+    console.log(backgrounImageModeSelect.value);
+    mainImage.style.backgroundBlendMode = `${backgrounImageModeSelect.value}`;
+}
