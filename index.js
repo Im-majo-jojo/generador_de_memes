@@ -166,56 +166,33 @@ const leftAlignment = document.querySelector("#left-align-text")
 const centertAlignment = document.querySelector("#center-align-text")
 const rightAlignment = document.querySelector("#right-align-text")
 leftAlignment.addEventListener("click", () => {
-    topFrameText.classList.add("frame-left-align");
-    bottomFrameText.classList.add("frame-left-align");
-    topFrameText.classList.remove("frame-center-align");
-    topFrameText.classList.remove("frame-right-align");
-    bottomFrameText.classList.remove("frame-center-align");
-    bottomFrameText.classList.remove("frame-right-align");
+    topFrameText.style.justifyContent = "left";
+    bottomFrameText.style.justifyContent = "left";
 })
 centertAlignment.addEventListener("click", () => {
-    topFrameText.classList.add("frame-center-align");
-    bottomFrameText.classList.add("frame-center-align");
-    topFrameText.classList.remove("frame-left-align");
-    topFrameText.classList.remove("frame-right-align");
-    bottomFrameText.classList.remove("frame-left-align");
-    bottomFrameText.classList.remove("frame-right-align");
+    topFrameText.style.justifyContent = "center";
+    bottomFrameText.style.justifyContent = "center";
 })
 rightAlignment.addEventListener("click", () => {
-    topFrameText.classList.add("frame-right-align");
-    bottomFrameText.classList.add("frame-right-align");
-    topFrameText.classList.remove("frame-center-align");
-    topFrameText.classList.remove("frame-left-align");
-    bottomFrameText.classList.remove("frame-center-align");
-    bottomFrameText.classList.remove("frame-left-align");
+    topFrameText.style.justifyContent = "right";
+    bottomFrameText.style.justifyContent = "right";
 })
-//contour button
-// text-contour
+//contour button - text-contour
 const buttonContourDark = document.querySelector("#dark-contour-text")
 buttonContourDark.onclick = ()=>{
-    topFrameText.classList.add("text-contour-dark");
-    topFrameText.classList.remove("text-contour-light");
-    bottomFrameText.classList.add("text-contour-dark");
-    bottomFrameText.classList.remove("text-contour-light");
-    console.log("iwork1")
+    topFrameText.style.webkitTextStroke = "2px Black";
+    bottomFrameText.style.webkitTextStroke = "2px Black";
 }
 const buttonContourLight = document.querySelector("#ligth-contour-text")
 buttonContourLight.onclick = ()=>{
-    topFrameText.classList.add("text-contour-light");
-    topFrameText.classList.remove("text-contour-dark");
-    bottomFrameText.classList.add("text-contour-light");
-    bottomFrameText.classList.remove("text-contour-dark");
-    console.log("iwork2")
+    topFrameText.style.webkitTextStroke = "2px White";
+    bottomFrameText.style.webkitTextStroke = "2px White";
 }
 const buttonContourNone = document.querySelector("#none-contour-text")
 buttonContourNone.onclick = ()=>{
-    topFrameText.classList.remove("text-contour-dark");
-    topFrameText.classList.remove("text-contour-light");
-    bottomFrameText.classList.remove("text-contour-dark");
-    bottomFrameText.classList.remove("text-contour-light");
-    console.log("iwork3")
+    topFrameText.style.webkitTextStroke = "0";
+    bottomFrameText.style.webkitTextStroke = "0";
 }
-
 //font size
 const selectFontSize = document.querySelector("#text-size-input")
 const fontSizeSelected = () => {
