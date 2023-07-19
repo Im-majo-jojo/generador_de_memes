@@ -224,13 +224,21 @@ const fontSizeSelected = () => {
 }
 selectFontSize.addEventListener("change", () => fontSizeSelected())
 
-//lineheight
+//padding text
 const frameTextPadding = document.querySelector("#padding-text-value")
 const paddingText = () => {
     topFrameText.style.fontSize = `${frameTextPadding.value}px`
     bottomFrameText.style.fontSize = `${frameTextPadding.value}px`
 }
 frameTextPadding.addEventListener("change", () => paddingText())
+
+//lineheight
+const frameTextHeightLine = document.querySelector("#select-line-height")
+const lineHeightText = () => {
+    topFrameText.style.lineHeight = `${frameTextHeightLine.value}em`
+    bottomFrameText.style.lineHeight = `${frameTextHeightLine.value}em`
+}
+frameTextHeightLine.addEventListener("change", () => lineHeightText())
 //topFrameText
 // const topFrameText = document.querySelector("#top-frame-changes")
 // const bottomFrameText = document.querySelector("#bottom-frame-changes")
