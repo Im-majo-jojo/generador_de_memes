@@ -30,7 +30,7 @@ Los requisitos mínimos para que el proyecto sea considerado para la entrega son
 
 ### Enlace: :lobster:
 Dale click al siguiente enlace para acceder 
-(https://im-majo-jojo.github.io/generador_de_memes/ "Generador-de-memes")
+[Generador-de-memes](https://im-majo-jojo.github.io/generador_de_memes/ "Generador-de-memes")
  
 
 ### Herramientas usadas: :toolbox:
