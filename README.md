@@ -35,7 +35,7 @@ Dale click al siguiente enlace para acceder
 
 ### Herramientas usadas: :toolbox:
 
-![My Skills](https://skillicons.dev/icons?i=vscode,github,git,html,css,md) 
+![My Skills](https://skillicons.dev/icons?i=vscode,github,git,html,css,js,md) 
 
 ### You can reach me at: :fries:
 
